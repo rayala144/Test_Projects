@@ -174,8 +174,8 @@
       );
 
       // draws the ball
-      colorCircle(ball_X, ball_Y, 9, "red");
+      colorCircle(ball_X, ball_Y, 9, "yellow");
 
-      player_score(player1_score, 100, 100, 'white', 10)
-      player_score(player2_score, canvas.width-100, 100, 'white', 10)
+      player_score(player1_score, 100, 100, 'white', 30)
+      player_score(player2_score, canvas.width-100, 100, 'white', 30)
     }
