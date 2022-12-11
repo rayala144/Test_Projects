@@ -1,7 +1,7 @@
 import random
 
 
-def game():
+def game() -> None:
     user = input("What's your choice? (r) for rock, (p) for paper, (s) for scissors: ")
     computer = random.choice(['r', 'p', 's'])
     
@@ -25,4 +25,5 @@ def has_won(player, opponent):
         return True
 
 
-game()
+if __name__ == '__main__':
+    game()
