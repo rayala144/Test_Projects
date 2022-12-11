@@ -11,4 +11,4 @@ def generate(length) -> str:
 
 
 if __name__ == '__main__':
-    generate(5)
+    print(generate(10))
