@@ -1,7 +1,8 @@
 import os
+from Password_Generator import generate
 
 
-def main():
+def rename():
     i = 1
     path = input("Enter the path of the folder: ")
     new_name = input("What do you want to rename with? ")
@@ -15,4 +16,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    password = generate(5)
+    print(password)
