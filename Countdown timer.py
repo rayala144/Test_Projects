@@ -12,6 +12,6 @@ def countdown(t):
     print('Time Up!')
 
 
-t = input("Enter time in seconds: ")
-
-countdown(int(t))
+if __name__ == '__main__':
+    t = input("Enter time in seconds: ")
+    countdown(int(t))
