@@ -8,10 +8,8 @@ def countdown(t):
         print(timer, end="\r")
         time.sleep(1)
         t -= 1
-
     print('Time Up!')
 
 
 if __name__ == '__main__':
-    t = input("Enter time in seconds: ")
-    countdown(int(t))
+    countdown(5)
