@@ -11,5 +11,5 @@ def getStockPrice(cmpnyCode):
 
 
 if __name__ == '__main__':
-    price = getStockPrice('nflx')
+    price = getStockPrice(input("Enter the company code: "))
     print(price)
