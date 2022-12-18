@@ -36,5 +36,7 @@ def computer_guess(x):
     print(f"Yay! I got the number {guess_value} correctly!!")
 
 
-guess_range = int(input("What's the range you want me to guess over? "))
-computer_guess(guess_range)
+
+if __name__ == '__main__':
+    guess_range = int(input("What's the range you want me to guess over? "))
+    computer_guess(guess_range)
