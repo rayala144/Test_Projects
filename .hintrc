@@ -9,6 +9,7 @@
         "html-has-lang": "off"
       }
     ],
-    "highest-available-document-mode": "off"
+    "highest-available-document-mode": "off",
+    "meta-viewport": "off"
   }
 }
