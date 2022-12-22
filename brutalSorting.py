@@ -12,5 +12,6 @@ def sort_one_billion_random_numbers():
         return True
     else:
         return False
-if __name__ = "__main__":
+        
+if __name__ == "__main__":
     sort_one_billion_random_numbers()
