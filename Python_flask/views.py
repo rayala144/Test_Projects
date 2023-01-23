@@ -12,7 +12,8 @@ def home():
 def profile():
     args = request.args
     name = args.get('name')
-    return render_template("profile.html", name=name, hobby="gamer")
+    hobby = args.get('hobby')
+    return render_template("profile.html", name=name, hobby=hobby)
 
 
 @views.route("/json")
