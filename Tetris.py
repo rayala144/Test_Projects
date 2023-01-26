@@ -176,7 +176,7 @@ def startGame():
             game.new_block()
         if game.nextBlock is None:
             game.next_block()
-        counter += 1 #Keeping track if the time 
+        counter += 1 # Keeping track of the time 
         if counter > 100000:
             counter = 0
 
