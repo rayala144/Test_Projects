@@ -13,4 +13,4 @@ def getWeather(cityName):
 if __name__ == '__main__':
     cityName = input("Enter city name: ")
     weatherData = getWeather(cityName)
-    pprint(weatherData)
+    pprint(weatherData['main'])
