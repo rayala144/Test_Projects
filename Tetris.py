@@ -171,12 +171,12 @@ def startGame():
     pressing_down = False
     
     while not done:
-        #Create a new block if there is no moving block
+        # Create a new block if there is no moving block
         if game.block is None:
             game.new_block()
         if game.nextBlock is None:
             game.next_block()
-        counter += 1 # Keeping track of the time 
+        counter += 1    # Keeping track of the time 
         if counter > 100000:
             counter = 0
 
