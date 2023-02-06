@@ -1,5 +1,4 @@
 import os
-from Password_Generator import generate
 
 
 def rename():
@@ -15,6 +14,3 @@ def rename():
         i += 1
 
 
-if __name__ == '__main__':
-    password = generate(5)
-    print(password)
