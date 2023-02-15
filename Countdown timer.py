@@ -12,4 +12,4 @@ def countdown(t):
 
 
 if __name__ == '__main__':
-    countdown(5)
+    countdown(2)
