@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Read in the Excel file
-df = pd.read_excel('sample.xlsx')
+df = pd.read_excel('C:\Users\rayal\Documents\Github_related\Simple-Projects\sample.xlsx')
 
 # Remove rows with missing values
 df.dropna(inplace=True)
