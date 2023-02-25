@@ -1,7 +1,7 @@
 import json
 import os
 from tkinter import filedialog as fd
-from deepdiff import DeepDiff
+from deepdiff import DeepDiff  # This should be imported first
 
 
 def getFilePath(fileType):
