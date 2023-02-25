@@ -1,11 +1,25 @@
 import json
+import os
+from tkinter import filedialog as fd
 from deepdiff import DeepDiff
 
 
+def getFilePath(fileType):
+    # selecting the file using the askopenfilename() method of filedialog
+    the_file = fd.askopenfilename(
+        title=fileType,
+        filetypes=[("json files", "*.json")]
+    )
+    # getting path of a file using the startfile() method of the os module
+    file_path = os.path.abspath(the_file)
+    return file_path
+    # os.startfile(os.path.abspath(the_file))
+
+
 # path to reference json file
-jsn1 = open('./JSON_Compare/sample1.json')
+jsn1 = open(getFilePath("Select reference json file"))
 # path to updated/changed json file
-jsn2 = open('./JSON_Compare/sample2.json')
+jsn2 = open(getFilePath("Select updated/changed json file"))
 
 # sampleDict = { "name": "Emma", "rollNumber": 5 }
 # with open("student.json", "w") as write_file:
@@ -27,7 +41,6 @@ for key in jsoned.keys():
             # print(root)
 
 
-
 def ask_choice():
     option = input("Print or save compare.json? ").lower()
     if option == "print" or option == "p":
@@ -37,11 +50,10 @@ def ask_choice():
             json.dump(jsoned, outfile, indent=4)
         print("compare.json file saved")
     else:
-        print("Error: Unknown option: " + option + "\nType 'print' or 'p' to print differences and 'save' or 's' to save the differences as a json file\n")
+        print("Error: Unknown option: " + option + "\nType 'print' or 'p' to print differences and 'save' or 's' to "
+                                                   "save the differences as a json file\n")
         ask_choice()
 
 
 if __name__ == "__main__":
     ask_choice()
-
-
