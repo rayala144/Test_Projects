@@ -45,9 +45,8 @@ for key in jsoned["dictionary_item_removed"]:
 
 for key in jsoned["values_changed"]:
     keys_updated[(re.findall(r"\'([^\']*)\'", key))[0]] = jsoned["values_changed"][key]["new_value"]
-
-for key in jsoned["values_changed"]:
     keys_updated_old[(re.findall(r"\'([^\']*)\'", key))[0]] = jsoned["values_changed"][key]["old_value"]
+
 
 master_dict = {}
 master_dict["keys_added"] = keys_added
