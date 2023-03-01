@@ -4,7 +4,7 @@
     "gender": "male",
     "age": 28,
     "address": {
-        "streetAddress": "i18n.t('oogiliboogili')",
+        "streetAddress": "Trans i18nKey='sdabvishvb'",
         "city": "San Diego",
         "state": "CA",
         "code" : "root['label.sample2.json']"

@@ -4,9 +4,10 @@
    "gender": "male",
    "age": 28,
    "address": {
-       "streetAddress": "101",
+       "streetAddress": " t('string1')",
        "city": "San Diego",
-       "state": "CA"
+       "state": "CA",
+     "code": "root['label.sample1.json']"
    },
    "phoneNumbers": [
        { "type": "home", "number": "7349282382" }
