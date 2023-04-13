@@ -41,6 +41,7 @@ def message(msg, color):
 def gameLoop():
 
     snake_speed = 15
+    score = 0
 
     game_over = False
     game_close = False
@@ -114,8 +115,9 @@ def gameLoop():
         if x1 == foodx and y1 == foody:
             foodx = round(random.randrange(0, dis_width - snake_block) / 10.0) * 10.0
             foody = round(random.randrange(0, dis_height - snake_block) / 10.0) * 10.0
-            Length_of_snake += 1
-            snake_speed += 7
+            Length_of_snake += 2
+            snake_speed += 1
+            score += 1
  
         clock.tick(snake_speed)
  
