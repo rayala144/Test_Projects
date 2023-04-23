@@ -39,7 +39,7 @@ attachment = open("Path of the file", "rb")
 p = MIMEBase('application', 'octet-stream')
 
 # To change the payload into encoded form
-p.set_payload((attachment).read())
+p.set_payload(attachment.read())
 
 # encode into base64
 encoders.encode_base64(p)
