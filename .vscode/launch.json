@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CountBillion",
+            "request": "launch",
+            "mainClass": "CountBillion",
+            "projectName": "Test_Projects_31facdef"
+        },
+        {
+            "type": "java",
             "name": "Launch First",
             "request": "launch",
             "mainClass": "First",
