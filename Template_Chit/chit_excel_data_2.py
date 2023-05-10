@@ -63,6 +63,6 @@ create_sheet(3)['F43'].font = Font(bold=True, italic=True, size=14)
 create_sheet(3)['E43'].value, create_sheet(3)['F43'].value = "GRAND TOTAL", sum(totals)
 
 # save file
-workbook.save("chit_data.xlsx")
+workbook.save("chit_data_fixed.xlsx")
 
 
