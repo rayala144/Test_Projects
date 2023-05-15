@@ -5,6 +5,8 @@ import numpy as np
 
 def sort_one_billion_random_numbers():
 
+    print("Process started")
+
     # start time
     start = time.time()
 
@@ -16,6 +18,7 @@ def sort_one_billion_random_numbers():
 
     # end time
     end = time.time()
+    print("Process ended")
     print(f'Time taken: {abs(start - end)}')
 
 
