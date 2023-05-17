@@ -1,12 +1,13 @@
 public class CountBillion {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
-
+        double k = 0;
         // Count to 1 billion
-        for (int i = 0; i < 1000000000; i++) {
+        for (double i = 0; i < 1000000000; i++) {
             // Do nothing
+            k = k + 1;
         }
-
+        System.out.println(k);
         long endTime = System.currentTimeMillis();
         long timeTaken = endTime - startTime;
 

@@ -9,6 +9,13 @@
             "name": "CountBillion",
             "request": "launch",
             "mainClass": "CountBillion",
+            "projectName": "Test_Projects_80d99bed"
+        },
+        {
+            "type": "java",
+            "name": "CountBillion",
+            "request": "launch",
+            "mainClass": "CountBillion",
             "projectName": "Test_Projects_31facdef"
         },
         {
