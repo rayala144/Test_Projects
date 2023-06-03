@@ -15,7 +15,17 @@ def getFilePath():
     return file_path
     # os.startfile(os.path.abspath(the_file))
 
-workbook = openpyxl.load_workbook(getFilePath())
+
+def add_suffix_to_filename(file_path, suffix):
+    directory_path = os.path.dirname(file_path)
+    filename, extension = os.path.splitext(os.path.basename(file_path))
+    updated_filename = filename + suffix + extension
+    updated_file_path = os.path.join(directory_path, updated_filename)
+    return updated_file_path
+
+in_file_path = fr'{getFilePath()}'
+print(in_file_path)
+workbook = openpyxl.load_workbook(in_file_path)
 
 
 def create_sheet(sheet_num: int):
@@ -75,7 +85,11 @@ autoFillSum(3, 40, 'E', create_sheet(3))
 create_sheet(3)['F43'].font = Font(bold=True, italic=True, size=14)
 create_sheet(3)['E43'].value, create_sheet(3)['F43'].value = "GRAND TOTAL", sum(totals)
 
+#save file path
+# out_file_path = fr'{os.path.dirname(in_file_path)}\updated_chit.xlsx'
+out_file_path = add_suffix_to_filename(in_file_path, "_updated")
 # save file
-workbook.save("Template_Chit\chit_data_3.xlsx")
+
+workbook.save(out_file_path)
 
 
