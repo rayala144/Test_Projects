@@ -3,18 +3,18 @@ import time
 import numpy as np
 
 
-def sort_one_billion_random_numbers():
+def sort_random_numbers(number_range, strength) -> None:
 
     print("Process started")
 
     # start time
     start = time.time()
 
-    # Generate a list of one billion random numbers
-    random_numbers = np.array([random.randint(0, 1000000) for i in range(10000000)])
+    # Generate a list of random numbers
+    random_numbers = np.array([random.randint(0, number_range) for _ in range(strength)])
 
     # Sort the list of numbers
-    sorted(random_numbers)
+    random_numbers = sorted(random_numbers)
 
     # end time
     end = time.time()
@@ -23,5 +23,4 @@ def sort_one_billion_random_numbers():
 
 
 if __name__ == "__main__":
-    sort_one_billion_random_numbers()
-    
+    sort_random_numbers(10000, 3400000)
