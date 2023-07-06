@@ -1,0 +1,14 @@
+{
+    "configuration.policy.SelectedASecurityFirewall": "You have selected a Security Firewall Policy to Copy to NG Firewall Policy. \nAll Zone Pairs attached and the Application List to Drop added to the Rules(if any) in the Policy will be removed. \nAfter copy, please add the required Zone Pairs and edit the policy to add the Application List for the Rules.",
+    "configuration.policy.siteAndRegionAreMutuallyExclusivePleaseDeleteExisting": "Site and Region are mutually exclusive. Please delete existing {{policyTableDataSiteOrRegionSaved}} (s) to continue.",
+    "configuration.policy.siteAndRegionAreMutuallyExclusivePleaseDeleteRegion": "Site and Region are mutually exclusive. Please delete Region to continue.",
+    "configuration.policy.siteAndRegionAreMutuallyExclusivePleasedeleteSite": "Site and Region are mutually exclusive. Please delete Site to continue.",
+    "configuration.policy.sLAClasslistsThatAreCreatedByPartnerCannotBeDeleted": "SLA Class lists that are created by partner cannot be deleted.",
+    "configuration.policy.sLAClassSelectedDoesNotHaveFallbackBestTunnelEnabled": "SLA Class selected, does not have Fallback Best Tunnel enabled. Please change the SLA class or change to Strict/Drop or Load Balance",
+    "configuration.policy.TLOCOrNextHopIsMandatoryWhenConfiguringVPN": "TLOC or Next Hop is mandatory when configuring VPN. Please populate Action > TLOC or Action > Next Hop",
+    "configuration.policy.TOS": "TOS",
+    "configuration.security.allows\u2018icmpUnreachableError": "Allows \u2018ICMP unreachable error packets/per session\u2019 to pass through until default max",
+    "configuration.security.Log": "Log",
+    "configuration.security.maximumOf144CharactersExamplePleaseContactNetworkAdministrator": "Maximum of 144 characters. Example: Please contact your Network Administrator",
+    "configuration.security.RuleSets": "Rule Sets"
+}
