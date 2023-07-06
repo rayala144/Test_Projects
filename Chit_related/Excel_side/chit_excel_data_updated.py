@@ -23,10 +23,6 @@ def add_suffix_to_filename(file_path, suffix):
     updated_file_path = os.path.join(directory_path, updated_filename)
     return updated_file_path
 
-in_file_path = fr'{getFilePath()}'
-print(in_file_path)
-workbook = openpyxl.load_workbook(in_file_path)
-
 
 def create_sheet(sheet_num: int):
     work_Sheet = workbook[f'Sheet{str(sheet_num)}']
@@ -34,7 +30,7 @@ def create_sheet(sheet_num: int):
 
 
 
-def getNumData(start_row: int, column: str, workSheet):
+def getNumData(start_row: int, column: str, workSheet) -> dict:
     start_cell, end_row, data_num = workSheet[column + str(start_row)], start_row, {}
     itr_cell = start_cell
     while itr_cell.value is not None:
@@ -43,11 +39,6 @@ def getNumData(start_row: int, column: str, workSheet):
         itr_cell = workSheet[column + str(end_row)]
     return data_num
     # length = (end_row - start_row) + 1
-
-
-data2 = getNumData(3, 'B', create_sheet(1))
-num_list = [str(num) for num in range(1, len(data2) + 1)]
-totals = []
 
 
 def autoFillSum(start_row: int, end_row: int, column: str, workSheet):
@@ -73,23 +64,35 @@ def autoFillSum(start_row: int, end_row: int, column: str, workSheet):
     totals.append(total_sum)
 
 
-# print(getNumData(3, 'B', worksheet1))
-autoFillSum(3, 32, 'B', create_sheet(2))
-autoFillSum(3, 32, 'E', create_sheet(2))
-autoFillSum(3, 40, 'B', create_sheet(3))
-autoFillSum(3, 40, 'E', create_sheet(3))
-# autoFillSum(5, 128, 'B', worksheet4)
 
 
-# Grand total
-create_sheet(3)['F43'].font = Font(bold=True, italic=True, size=14)
-create_sheet(3)['E43'].value, create_sheet(3)['F43'].value = "GRAND TOTAL", sum(totals)
+if __name__ == "__main__":
 
-#save file path
-# out_file_path = fr'{os.path.dirname(in_file_path)}\updated_chit.xlsx'
-out_file_path = add_suffix_to_filename(in_file_path, "_updated")
-# save file
+    in_file_path = fr'{getFilePath()}'
+    print(in_file_path)
+    workbook = openpyxl.load_workbook(in_file_path)
 
-workbook.save(out_file_path)
+    data2 = getNumData(3, 'B', create_sheet(1))
+    num_list = [str(num) for num in range(1, len(data2) + 1)]
+    totals = []
+
+    # print(getNumData(3, 'B', worksheet1))
+    autoFillSum(3, 32, 'B', create_sheet(2))
+    autoFillSum(3, 32, 'E', create_sheet(2))
+    autoFillSum(3, 40, 'B', create_sheet(3))
+    autoFillSum(3, 40, 'E', create_sheet(3))
+    # autoFillSum(5, 128, 'B', worksheet4)
+
+
+    # Grand total
+    create_sheet(3)['F43'].font = Font(bold=True, italic=True, size=14)
+    create_sheet(3)['E43'].value, create_sheet(3)['F43'].value = "GRAND TOTAL", sum(totals)
+
+    #save file path
+    # out_file_path = fr'{os.path.dirname(in_file_path)}\updated_chit.xlsx'
+    out_file_path = add_suffix_to_filename(in_file_path, "_updated")
+    # save file
+
+    workbook.save(out_file_path)
 
 
