@@ -37,7 +37,7 @@ def upload_file():
         else:
             return 'Invalid file format. Only Excel files are allowed'
         
-    return render_template('index.html')
+    return render_template('new_index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

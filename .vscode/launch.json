@@ -1,49 +1,73 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "type": "java",
+      "name": "CountBillion",
+      "request": "launch",
+      "mainClass": "CountBillion",
+      "projectName": "Test_Projects_80d99bed"
+    },
+    {
+      "type": "java",
+      "name": "CountBillion",
+      "request": "launch",
+      "mainClass": "CountBillion",
+      "projectName": "Test_Projects_31facdef"
+    },
+    {
+      "type": "java",
+      "name": "Launch First",
+      "request": "launch",
+      "mainClass": "First",
+      "projectName": "Test_Projects_31facdef"
+    },
+    {
+      "name": "(gdb) Attach",
+      "type": "cppdbg",
+      "request": "attach",
+      "program": "./a.exe",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/path/to/gdb",
+      "setupCommands": [
         {
-            "type": "java",
-            "name": "CountBillion",
-            "request": "launch",
-            "mainClass": "CountBillion",
-            "projectName": "Test_Projects_80d99bed"
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
         },
         {
-            "type": "java",
-            "name": "CountBillion",
-            "request": "launch",
-            "mainClass": "CountBillion",
-            "projectName": "Test_Projects_31facdef"
-        },
-        {
-            "type": "java",
-            "name": "Launch First",
-            "request": "launch",
-            "mainClass": "First",
-            "projectName": "Test_Projects_31facdef"
-        },
-        {
-            "name": "(gdb) Attach",
-            "type": "cppdbg",
-            "request": "attach",
-            "program": "./a.exe",
-            "MIMode": "gdb",
-            "miDebuggerPath": "/path/to/gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                },
-                {
-                    "description": "Set Disassembly Flavor to Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "ignoreFailures": true
-                }
-            ]
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
         }
-    ]
+      ]
+    }
+  ]
 }
