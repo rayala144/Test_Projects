@@ -1,5 +1,5 @@
 import time
-
+import os
 
 def countdown(t):
     while t:
@@ -12,4 +12,5 @@ def countdown(t):
 
 
 if __name__ == '__main__':
-    countdown(2)
+    t = int(input("No of seconds: "))
+    countdown(t)
