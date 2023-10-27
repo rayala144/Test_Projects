@@ -8,7 +8,7 @@ qr.add_data(data)
 
 qr.make(fit=True)
 
-img = qr.make_image(fill_color = 'red', background_color = 'white')
+img = qr.make_image(fill_color='red', background_color='white')
 # img = qrcode.make(data)
 
 img.save('C:/Users/rayal/Desktop/Python Projects/qrcode1.png')
