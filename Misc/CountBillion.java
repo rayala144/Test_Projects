@@ -1,7 +1,7 @@
 public class CountBillion {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
-        double k = 0;
+        long k = 0;
         // Count to 1 billion
         for (double i = 0; i < 1000000000; i++) {
             // Do nothing
